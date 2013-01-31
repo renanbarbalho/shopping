@@ -6,11 +6,54 @@
     xmlns:h="http://java.sun.com/jsf/html"
     xmlns:p="http://primefaces.org/ui">
 <h:head>
-<title>:: Welcome ::</title>
+	<title>:: Welcome ::</title>
+	<link href="css/default.css" rel="stylesheet" type="text/css"></link>
 </h:head>
-<h:body>
-	<p:panel header="Shopping Control">
-		<h:outputLabel value="Under Construction"/>
-	</p:panel>
+<h:body styleClass="planoFundo">
+	<table cellpadding="0" cellspacing="0" class="tabelaFull">
+		<tr>
+			<td align="center" valign="middle">
+			
+				<table>
+					<tr>
+						<td>
+							<img src="images/logo.png" alt=":: Shopping Control ::"></img>
+						</td>
+						<td width="30"></td>
+						<td>
+							<p:panel header=":: Efetue o login" style="width: 250px;">
+								
+								<table>
+									<tr>
+										<td>
+											<h:outputLabel value="Usuário: "/>
+										</td>
+										<td>
+											<p:inputText tabindex="1"/>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<h:outputLabel value="Senha: "/>
+										</td>
+										<td>
+											<p:keyboard  
+                    password="true" keypadOnly="true"/>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" align="center">
+											<p:button value="Logar" href="loading.jsf" />
+										</td>
+									</tr>
+								</table>
+							</p:panel>
+						</td>
+					</tr>
+				</table>
+			
+			</td>
+		</tr>
+	</table>
 </h:body>
 </html>

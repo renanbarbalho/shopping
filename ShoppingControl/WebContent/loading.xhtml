@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets" 
+    xmlns:f="http://java.sun.com/jsf/core" 
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>:: Welcome ::</title>
+	<link href="css/default.css" rel="stylesheet" type="text/css"></link>
+	<script type="text/javascript">  
+	    function start() {  
+	        window['progress'] = setInterval(function() {  
+	            var oldValue = pbClient.getValue(),  
+	            newValue = oldValue + 10;  
+	  
+	            pbClient.setValue(pbClient.getValue() + 10);  
+	  
+	            if(newValue == 100) {  
+	                clearInterval(window['progress']);
+	                document.location = 'main.jsf';
+	            }  
+	        }, 1000);  
+	    }  
+	  
+	    function cancel() {  
+	        clearInterval(window['progress']);  
+	        pbClient.setValue(0);  
+ 	    }  
+	</script>  
+</h:head>
+<h:body styleClass="planoFundo" onload="start();">
+	<table cellpadding="0" cellspacing="0" class="tabelaFull">
+		<tr>
+			<td align="center" valign="middle">
+			
+				<!-- caso queria animar o carregando adicionar a classe CSS -->
+				<p:progressBar id="progressBarClient" widgetVar="pbClient" style="width:300px"/><br></br>  
+				Carregando informações . . .
+			</td>
+		</tr>
+	</table>
+</h:body>
+</html>
