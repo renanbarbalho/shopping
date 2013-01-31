@@ -1,0 +1,6 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <persistence-unit name="mercado" transaction-type="JTA">
+	    <jta-data-source>jdbc/MercadoBanco</jta-data-source>
+	    
+    </persistence-unit> 
+</persistence>
